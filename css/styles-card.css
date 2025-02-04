@@ -1,0 +1,701 @@
+/* Атака титанов */
+.atack-on-titan-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 320px;
+    height: 150px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    user-select: none;
+    transition: transform 0.5s ease;
+    background-image: url('../image/card/atack-on-titan-card.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center left;
+    box-shadow: -6px 6px 10px  rgba(0, 0, 0, 0.7);
+    border: 3px solid rgb(98, 61, 95);
+}
+.atack-on-titan-card::after {
+    color: rgba(238, 195, 235);
+    content: "Атака титанов";
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    transform: translateY(-50%);
+    padding: 0;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.atack-on-titan-card::before {
+    color: rgb(247, 81, 236);
+    content: "7.5";
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transform: translate(-50%);
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: greenyellow;
+    border-radius: 10px;
+
+}
+.atack-on-titan-card:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Наруто */
+.naruto-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 320px;
+    height: 150px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    user-select: none;
+    transition: transform 0.5s ease;
+    background-image: url('../image/card/naruto-card.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center left;
+    box-shadow: -6px 6px 10px  rgba(0, 0, 0, 0.7);
+    border: 3px solid rgb(98, 61, 95);
+    cursor: pointer;
+}
+.naruto-card a {
+    width: 100%;
+    height: 100%;
+}
+.naruto-card::after {
+    color: rgba(238, 195, 235);
+    content: "Наруто";
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    transform: translateY(-50%);
+    padding: 0;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.naruto-card::before {
+    color: rgb(247, 81, 236);
+    content: "8";
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transform: translate(-50%);
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: greenyellow;
+    border-radius: 10px;
+
+}
+.naruto-card:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Повелитель */
+.overlord-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 320px;
+    height: 150px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    user-select: none;
+    transition: transform 0.5s ease;
+    background-image: url('../image/card/overlord-card.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center left;
+    box-shadow: -6px 6px 10px  rgba(0, 0, 0, 0.7);
+    border: 3px solid rgb(98, 61, 95);
+}
+.overlord-card::after {
+    color: rgba(238, 195, 235);
+    content: "Повелитель";
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    transform: translateY(-50%);
+    padding: 0;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.overlord-card::before {
+    color: rgb(247, 81, 236);
+    content: "10";
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transform: translate(-50%);
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: greenyellow;
+    border-radius: 10px;
+
+}
+.overlord-card:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Клинок рассекающий демонов */
+.the-blade-that-cut-the-demons-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 320px;
+    height: 150px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    user-select: none;
+    transition: transform 0.5s ease;
+    background-image: url('../image/card/the-blade-that-cut-the-demons-card.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center left;
+    box-shadow: -6px 6px 10px  rgba(0, 0, 0, 0.7);
+    border: 3px solid rgb(98, 61, 95);
+}
+.the-blade-that-cut-the-demons-card::after {
+    color: rgba(238, 195, 235);
+    content: "Клинок рассекающий демонов";
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    transform: translateY(-50%);
+    padding: 0;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.the-blade-that-cut-the-demons-card::before {
+    color: rgb(247, 81, 236);
+    content: "9.3";
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transform: translate(-50%);
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: greenyellow;
+    border-radius: 10px;
+
+}
+.the-blade-that-cut-the-demons-card:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Человек бензопила */
+.chainsaw-man-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 320px;
+    height: 150px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    user-select: none;
+    transition: transform 0.5s ease;
+    background-image: url('../image/card/chainsaw-man-card.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center left;
+    box-shadow: -6px 6px 10px  rgba(0, 0, 0, 0.7);
+    border: 3px solid rgb(98, 61, 95);
+}
+.chainsaw-man-card::after {
+    color: rgba(238, 195, 235);
+    content: "Человек бензопила";
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    transform: translateY(-50%);
+    padding: 0;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.chainsaw-man-card::before {
+    color: rgb(247, 81, 236);
+    content: "9.5";
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transform: translate(-50%);
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: greenyellow;
+    border-radius: 10px;
+
+}
+.chainsaw-man-card:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Хоримия */
+.horimiya-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 320px;
+    height: 150px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    user-select: none;
+    transition: transform 0.5s ease;
+    background-image: url('../image/card/horimiya-card.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center left;
+    box-shadow: -6px 6px 10px  rgba(0, 0, 0, 0.7);
+    border: 3px solid rgb(98, 61, 95);
+}
+.horimiya-card::after {
+    color: rgba(238, 195, 235);
+    content: "Хоримия";
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    transform: translateY(-50%);
+    padding: 0;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.horimiya-card::before {
+    color: rgb(247, 81, 236);
+    content: "10";
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transform: translate(-50%);
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: greenyellow;
+    border-radius: 10px;
+}
+.horimiya-card:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Восхождение в тени */
+.the-eminence-in-shadow-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 320px;
+    height: 150px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    user-select: none;
+    transition: transform 0.5s ease;
+    background-image: url('../image/card/the-eminence-in-shadow-card.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center left;
+    box-shadow: -6px 6px 10px  rgba(0, 0, 0, 0.7);
+    border: 3px solid rgb(98, 61, 95);
+}
+.the-eminence-in-shadow-card::after {
+    color: rgba(238, 195, 235);
+    content: "Восхождение в тени";
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    transform: translateY(-50%);
+    padding: 0;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.the-eminence-in-shadow-card::before {
+    color: rgb(247, 81, 236);
+    content: "10";
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transform: translate(-50%);
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: greenyellow;
+    border-radius: 10px;
+}
+.the-eminence-in-shadow-card:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Восхождение героя щита */
+.the-rising-of-the-shield-hero-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 320px;
+    height: 150px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    user-select: none;
+    transition: transform 0.5s ease;
+    background-image: url('../image/card/the-rising-of-the-shield-hero-card.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center left;
+    box-shadow: -6px 6px 10px  rgba(0, 0, 0, 0.7);
+    border: 3px solid rgb(98, 61, 95);
+}
+.the-rising-of-the-shield-hero-card::after {
+    color: rgba(238, 195, 235);
+    content: "Восхождение героя щита";
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    transform: translateY(-50%);
+    padding: 0;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.the-rising-of-the-shield-hero-card::before {
+    color: rgb(247, 81, 236);
+    content: "10";
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transform: translate(-50%);
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: greenyellow;
+    border-radius: 10px;
+}
+.the-rising-of-the-shield-hero-card:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Ангел по соседству */
+.the-angel-next-door-spoils-me-rotten-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 320px;
+    height: 150px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    user-select: none;
+    transition: transform 0.5s ease;
+    background-image: url('../image/card/the-angel-next-door-spoils-me-rotten-card.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center left;
+    box-shadow: -6px 6px 10px  rgba(0, 0, 0, 0.7);
+    border: 3px solid rgb(98, 61, 95);
+}
+.the-angel-next-door-spoils-me-rotten-card::after {
+    color: rgba(238, 195, 235);
+    content: "Ангел по соседству";
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    transform: translateY(-50%);
+    padding: 0;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.the-angel-next-door-spoils-me-rotten-card::before {
+    color: rgb(247, 81, 236);
+    content: "10";
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transform: translate(-50%);
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: greenyellow;
+    border-radius: 10px;
+}
+.the-angel-next-door-spoils-me-rotten-card:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Кагуя: в любви как на войне */
+.kagya-sama-love-is-war-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 320px;
+    height: 150px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    user-select: none;
+    transition: transform 0.5s ease;
+    background-image: url('../image/card/kagya-sama-love-is-war-card.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center left;
+    box-shadow: -6px 6px 10px  rgba(0, 0, 0, 0.7);
+    border: 3px solid rgb(98, 61, 95);
+}
+.kagya-sama-love-is-war-card::after {
+    color: rgba(238, 195, 235);
+    content: "Кагуя: в любви как на войне";
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    transform: translateY(-50%);
+    padding: 0;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.kagya-sama-love-is-war-card::before {
+    color: rgb(247, 81, 236);
+    content: "10";
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transform: translate(-50%);
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: greenyellow;
+    border-radius: 10px;
+}
+.kagya-sama-love-is-war-card:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* О моем перерождении в слизь */
+.that-time-i-got-reincarnated-at-a-slime-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 320px;
+    height: 150px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    user-select: none;
+    transition: transform 0.5s ease;
+    background-image: url('../image/card/that-time-i-got-reincarnated-at-a-slime-card.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center left;
+    box-shadow: -6px 6px 10px  rgba(0, 0, 0, 0.7);
+    border: 3px solid rgb(98, 61, 95);
+}
+.that-time-i-got-reincarnated-at-a-slime-card::after {
+    color: rgba(238, 195, 235);
+    content: "О моем перерождении в слизь";
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    transform: translateY(-50%);
+    padding: 0;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.that-time-i-got-reincarnated-at-a-slime-card::before {
+    color: rgb(247, 81, 236);
+    content: "10";
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transform: translate(-50%);
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: greenyellow;
+    border-radius: 10px;
+}
+.that-time-i-got-reincarnated-at-a-slime-card:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Ванпанчмен */
+.one-punch-man-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 320px;
+    height: 150px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    user-select: none;
+    transition: transform 0.5s ease;
+    background-image: url('../image/card/one-punch-man-card.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center left;
+    box-shadow: -6px 6px 10px  rgba(0, 0, 0, 0.7);
+    border: 3px solid rgb(98, 61, 95);
+}
+.one-punch-man-card::after {
+    color: rgba(238, 195, 235);
+    content: "Ванпанчмен";
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    transform: translateY(-50%);
+    padding: 0;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.one-punch-man-card::before {
+    color: rgb(247, 81, 236);
+    content: "10";
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transform: translate(-50%);
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: greenyellow;
+    border-radius: 10px;
+}
+.one-punch-man-card:hover {
+    transform: scale(1.1);
+}
