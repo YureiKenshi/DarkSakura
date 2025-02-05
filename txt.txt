@@ -1,0 +1,115 @@
+    display: inline-block;
+    margin: 0 15px;
+    justify-content: space-between;
+    color: rgb(247, 81, 236);
+    border: solid 2px rgb(238, 195, 235);
+    border-radius: 30px;
+    padding: 8px;
+    font-size: 20px;
+    background-color: rgb(246, 240, 246);
+    transition: color 0.5s ease, transform 0.5s ease, background-color 0.5s ease;
+    text-decoration: none;
+
+    color: rgba(237, 46, 163, 0.81);
+    transform: scale(1.1);
+    background-color: rgb(245, 224, 245);
+
+
+
+
+    .anime-container {
+    padding: 20px;
+    position: relative;
+    width: 85%;
+    height: 170px;
+    margin: 50px auto;
+    overflow-x: auto;
+    box-sizing: border-box;
+    scroll-snap-type: mandatory;
+    display: flex;
+    gap: 20px;
+    scroll-behavior: smooth;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+}
+.anime-container::-webkit-scrollbar {
+    display: none;
+}
+.anime-card {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    flex: 0 0 auto;
+    width: 320px;
+    height: 150px;
+    background-color: black;
+    justify-content: center;
+    border-radius: 15px;
+}
+.anime-card:first-child {
+    margin-left: 0;
+}
+.anime-card img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+const container = document.getElementById(".anime-container");
+const scrollLeft = document.getElementById(".scroll-button-left");
+const scrollRight = document.getElementById(".scroll-button-right");
+
+// Перетаскивание мышью (drag-to-scroll)
+let isDragging = false;
+let startX;
+let scrollStart;
+
+container.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  startX = e.pageX - container.offsetLeft;
+  scrollStart = container.scrollLeft;
+  container.style.cursor = "grabbing";
+});
+
+container.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+  const x = e.pageX - container.offsetLeft;
+  const walk = x - startX;
+  container.scrollLeft = scrollStart - walk;
+});
+
+container.addEventListener("mouseup", () => {
+  isDragging = false;
+  container.style.cursor = "grab";
+});
+
+container.addEventListener("mouseleave", () => {
+  isDragging = false;
+  container.style.cursor = "grab";
+});
+
+// Улучшенная прокрутка мыши и тачпада
+container.addEventListener("wheel", (e) => {
+  e.preventDefault(); // Отключаем вертикальную прокрутку
+  container.scrollLeft += e.deltaY * 10; // Ускоряем горизонтальную прокрутку
+}, { passive: false }); // Passive: false для preventDefault
+
+
+.profile-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    background-color: black;
+    border: solid 2px rgb(238, 195, 235);
+}
+.profile-icon:hover {
+    transform: scale(1.1);
+}
