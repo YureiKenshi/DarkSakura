@@ -142,3 +142,64 @@ function createSakura() {
 
 // Создаём лепестки каждые 200 мс
 setInterval(createSakura, 200);
+
+// Функциональность поиска
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    const searchSubmit = document.getElementById('search-submit');
+    const searchResults = document.getElementById('search-results');
+    
+    // Список аниме для поиска
+    const animeList = [
+        'Наруто', 'Атака титанов', 'Overlord', 'Клинок, рассекающий демонов',
+        'Человек-бензопила', 'Хоримия', 'Ангел по соседству балует меня',
+        'Величие в тени', 'Восхождение героя щита', 'Ванпанчмен',
+        'О моём перерождении в слизь', 'Кагуя: в любви как на войне'
+    ];
+    
+    function performSearch(query) {
+        if (!query.trim()) {
+            searchResults.innerHTML = '';
+            return;
+        }
+        
+        const filteredAnime = animeList.filter(anime => 
+            anime.toLowerCase().includes(query.toLowerCase())
+        );
+        
+        if (filteredAnime.length === 0) {
+            searchResults.innerHTML = '<div class="search-result-item">Аниме не найдено</div>';
+            return;
+        }
+        
+        searchResults.innerHTML = filteredAnime.map(anime => 
+            `<div class="search-result-item" onclick="selectAnime('${anime}')">${anime}</div>`
+        ).join('');
+    }
+    
+    // Поиск в реальном времени
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            performSearch(this.value);
+        });
+        
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch(this.value);
+            }
+        });
+    }
+    
+    if (searchSubmit) {
+        searchSubmit.addEventListener('click', function() {
+            performSearch(searchInput.value);
+        });
+    }
+});
+
+function selectAnime(animeName) {
+    alert(`Выбрано аниме: ${animeName}`);
+    // Здесь можно добавить логику перехода на страницу аниме
+    document.getElementById('search-button-panel').classList.remove('open');
+    document.getElementById('overlay').classList.remove('active');
+}
