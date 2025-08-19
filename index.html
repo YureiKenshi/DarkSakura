@@ -10,11 +10,41 @@
 </head>    
 <body>
     <img class="background-image" src="./image/tech/background.png">
+    
+    <!-- Система частиц -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Переключатель темы -->
+    <div class="theme-toggle">
+        <button id="theme-switch" class="theme-btn wave-effect">
+            <span class="theme-icon">🌙</span>
+        </button>
+    </div>
+
+    <!-- Музыкальный плеер -->
+    <div class="music-player">
+        <div class="music-info">
+            <div class="music-title">Сейчас играет</div>
+            <div class="music-track">Sakura - Anime OST</div>
+        </div>
+        <div class="music-controls">
+            <button class="music-btn wave-effect" id="prev-btn">⏮</button>
+            <button class="music-btn play-btn wave-effect" id="play-btn">▶</button>
+            <button class="music-btn wave-effect" id="next-btn">⏭</button>
+        </div>
+        <div class="music-progress">
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
     <header>
         <div class="logo"><a href="./html/index.html">🌸 DarkSakura</a></div>
         <nav class="nav">
             <a href="./html/for-you.html">Подборки</a>
             <a href="./html/library.html">Библиотека</a>
+            <a href="#" class="favorites-link">❤ Избранное <span class="favorites-count">0</span></a>
         </nav>
         <div class="profile-notifications">
             <div id="search-button" class="search-button"></div>
@@ -26,7 +56,6 @@
                 <div id="search-results" class="search-results"></div>
             </div>
             <div id="overlay" class="overlay"></div>
-
 
             <div id="notification-icon" class="notification-icon"></div>
             <div id="notification-icon-panel" class="notification-icon-panel">
@@ -98,7 +127,6 @@
                 </div>
             </div>
 
-
             <div id="profile-icon" class="profile-icon"></div>
             <div id="profile-icon-panel" class="profile-icon-panel">
                 <div class="profile-header">
@@ -128,7 +156,7 @@
                             <h4>Внешний вид</h4>
                             <div class="setting-item">
                                 <label>Темная тема</label>
-                                <input type="checkbox" checked>
+                                <input type="checkbox" checked id="dark-theme-toggle">
                             </div>
                             <div class="setting-item">
                                 <label>Автопрокрутка</label>
@@ -160,29 +188,25 @@
                     </div>
                 </div>
             </div>
-
         </div>   
     </header>
 
-    
-
     <div class="anime-list-all">
-
         <h1>Сейчас смотрят</h1>
         <div class="big-anime-container">
             <div class="anime-container">
-                <div class="naruto-card"></div>
-                <div class="atack-on-titan-card"></div>
-                <div class="overlord-card"></div>
-                <div class="the-blade-that-cut-the-demons-card"></div>
-                <div class="chainsaw-man-card"></div>
-                <div class="horimiya-card"></div>
-                <div class="the-angel-next-door-spoils-me-rotten-card"></div>
-                <div class="the-eminence-in-shadow-card"></div>
-                <div class="the-rising-of-the-shield-hero-card"></div>
-                <div class="one-punch-man-card"></div>
-                <div class="that-time-i-got-reincarnated-at-a-slime-card"></div>
-                <div class="kagya-sama-love-is-war-card"></div>
+                <div class="naruto-card" data-anime="naruto" data-title="Наруто" data-rating="8.7"></div>
+                <div class="atack-on-titan-card" data-anime="atack-on-titan" data-title="Атака титанов" data-rating="9.0"></div>
+                <div class="overlord-card" data-anime="overlord" data-title="Оверлорд" data-rating="8.4"></div>
+                <div class="the-blade-that-cut-the-demons-card" data-anime="the-blade-that-cut-the-demons" data-title="Клинок, рассекающий демонов" data-rating="8.9"></div>
+                <div class="chainsaw-man-card" data-anime="chainsaw-man" data-title="Человек-бензопила" data-rating="8.7"></div>
+                <div class="horimiya-card" data-anime="horimiya" data-title="Хоримия" data-rating="8.3"></div>
+                <div class="the-angel-next-door-spoils-me-rotten-card" data-anime="the-angel-next-door-spoils-me-rotten" data-title="Ангел по соседству" data-rating="8.1"></div>
+                <div class="the-eminence-in-shadow-card" data-anime="the-eminence-in-shadow" data-title="Величайший Демон-Лорд" data-rating="8.5"></div>
+                <div class="the-rising-of-the-shield-hero-card" data-anime="the-rising-of-the-shield-hero" data-title="Восхождение Героя Щита" data-rating="8.2"></div>
+                <div class="one-punch-man-card" data-anime="one-punch-man" data-title="Один удар" data-rating="8.8"></div>
+                <div class="that-time-i-got-reincarnated-at-a-slime-card" data-anime="that-time-i-got-reincarnated-at-a-slime" data-title="Перерождение в слизь" data-rating="8.0"></div>
+                <div class="kagya-sama-love-is-war-card" data-anime="kagya-sama-love-is-war" data-title="Кагуя-сама" data-rating="8.6"></div>
             </div>
             <div class="scroll-button-left"></div>
             <div class="scroll-button-right"></div>
@@ -191,18 +215,18 @@
         <h1>С высокой оценкой</h1>
         <div class="big-anime-container">
             <div class="anime-container">
-                <div class="naruto-card"></div>
-                <div class="atack-on-titan-card"></div>
-                <div class="overlord-card"></div>
-                <div class="the-blade-that-cut-the-demons-card"></div>
-                <div class="chainsaw-man-card"></div>
-                <div class="horimiya-card"></div>
-                <div class="the-angel-next-door-spoils-me-rotten-card"></div>
-                <div class="the-eminence-in-shadow-card"></div>
-                <div class="the-rising-of-the-shield-hero-card"></div>
-                <div class="one-punch-man-card"></div>
-                <div class="that-time-i-got-reincarnated-at-a-slime-card"></div>
-                <div class="kagya-sama-love-is-war-card"></div>
+                <div class="naruto-card" data-anime="naruto" data-title="Наруто" data-rating="8.7"></div>
+                <div class="atack-on-titan-card" data-anime="atack-on-titan" data-title="Атака титанов" data-rating="9.0"></div>
+                <div class="overlord-card" data-anime="overlord" data-title="Оверлорд" data-rating="8.4"></div>
+                <div class="the-blade-that-cut-the-demons-card" data-anime="the-blade-that-cut-the-demons" data-title="Клинок, рассекающий демонов" data-rating="8.9"></div>
+                <div class="chainsaw-man-card" data-anime="chainsaw-man" data-title="Человек-бензопила" data-rating="8.7"></div>
+                <div class="horimiya-card" data-anime="horimiya" data-title="Хоримия" data-rating="8.3"></div>
+                <div class="the-angel-next-door-spoils-me-rotten-card" data-anime="the-angel-next-door-spoils-me-rotten" data-title="Ангел по соседству" data-rating="8.1"></div>
+                <div class="the-eminence-in-shadow-card" data-anime="the-eminence-in-shadow" data-title="Величайший Демон-Лорд" data-rating="8.5"></div>
+                <div class="the-rising-of-the-shield-hero-card" data-anime="the-rising-of-the-shield-hero" data-title="Восхождение Героя Щита" data-rating="8.2"></div>
+                <div class="one-punch-man-card" data-anime="one-punch-man" data-title="Один удар" data-rating="8.8"></div>
+                <div class="that-time-i-got-reincarnated-at-a-slime-card" data-anime="that-time-i-got-reincarnated-at-a-slime" data-title="Перерождение в слизь" data-rating="8.0"></div>
+                <div class="kagya-sama-love-is-war-card" data-anime="kagya-sama-love-is-war" data-title="Кагуя-сама" data-rating="8.6"></div>
             </div>
             <div class="scroll-button-left"></div>
             <div class="scroll-button-right"></div>
@@ -211,18 +235,18 @@
         <h1>В 4к качестве</h1>
         <div class="big-anime-container">
             <div class="anime-container">
-                <div class="naruto-card"></div>
-                <div class="atack-on-titan-card"></div>
-                <div class="overlord-card"></div>
-                <div class="the-blade-that-cut-the-demons-card"></div>
-                <div class="chainsaw-man-card"></div>
-                <div class="horimiya-card"></div>
-                <div class="the-angel-next-door-spoils-me-rotten-card"></div>
-                <div class="the-eminence-in-shadow-card"></div>
-                <div class="the-rising-of-the-shield-hero-card"></div>
-                <div class="one-punch-man-card"></div>
-                <div class="that-time-i-got-reincarnated-at-a-slime-card"></div>
-                <div class="kagya-sama-love-is-war-card"></div>
+                <div class="naruto-card" data-anime="naruto" data-title="Наруто" data-rating="8.7"></div>
+                <div class="atack-on-titan-card" data-anime="atack-on-titan" data-title="Атака титанов" data-rating="9.0"></div>
+                <div class="overlord-card" data-anime="overlord" data-title="Оверлорд" data-rating="8.4"></div>
+                <div class="the-blade-that-cut-the-demons-card" data-anime="the-blade-that-cut-the-demons" data-title="Клинок, рассекающий демонов" data-rating="8.9"></div>
+                <div class="chainsaw-man-card" data-anime="chainsaw-man" data-title="Человек-бензопила" data-rating="8.7"></div>
+                <div class="horimiya-card" data-anime="horimiya" data-title="Хоримия" data-rating="8.3"></div>
+                <div class="the-angel-next-door-spoils-me-rotten-card" data-anime="the-angel-next-door-spoils-me-rotten" data-title="Ангел по соседству" data-rating="8.1"></div>
+                <div class="the-eminence-in-shadow-card" data-anime="the-eminence-in-shadow" data-title="Величайший Демон-Лорд" data-rating="8.5"></div>
+                <div class="the-rising-of-the-shield-hero-card" data-anime="the-rising-of-the-shield-hero" data-title="Восхождение Героя Щита" data-rating="8.2"></div>
+                <div class="one-punch-man-card" data-anime="one-punch-man" data-title="Один удар" data-rating="8.8"></div>
+                <div class="that-time-i-got-reincarnated-at-a-slime-card" data-anime="that-time-i-got-reincarnated-at-a-slime" data-title="Перерождение в слизь" data-rating="8.0"></div>
+                <div class="kagya-sama-love-is-war-card" data-anime="kagya-sama-love-is-war" data-title="Кагуя-сама" data-rating="8.6"></div>
             </div>
             <div class="scroll-button-left"></div>
             <div class="scroll-button-right"></div>
@@ -231,23 +255,51 @@
         <h1>Онгоинги</h1>
         <div class="big-anime-container">
             <div class="anime-container">
-                <div class="naruto-card"></div>
-                <div class="atack-on-titan-card"></div>
-                <div class="overlord-card"></div>
-                <div class="the-blade-that-cut-the-demons-card"></div>
-                <div class="chainsaw-man-card"></div>
-                <div class="horimiya-card"></div>
-                <div class="the-angel-next-door-spoils-me-rotten-card"></div>
-                <div class="the-eminence-in-shadow-card"></div>
-                <div class="the-rising-of-the-shield-hero-card"></div>
-                <div class="one-punch-man-card"></div>
-                <div class="that-time-i-got-reincarnated-at-a-slime-card"></div>
-                <div class="kagya-sama-love-is-war-card"></div>
+                <div class="naruto-card" data-anime="naruto" data-title="Наруто" data-rating="8.7"></div>
+                <div class="atack-on-titan-card" data-anime="atack-on-titan" data-title="Атака титанов" data-rating="9.0"></div>
+                <div class="overlord-card" data-anime="overlord" data-title="Оверлорд" data-rating="8.4"></div>
+                <div class="the-blade-that-cut-the-demons-card" data-anime="the-blade-that-cut-the-demons" data-title="Клинок, рассекающий демонов" data-rating="8.9"></div>
+                <div class="chainsaw-man-card" data-anime="chainsaw-man" data-title="Человек-бензопила" data-rating="8.7"></div>
+                <div class="horimiya-card" data-anime="horimiya" data-title="Хоримия" data-rating="8.3"></div>
+                <div class="the-angel-next-door-spoils-me-rotten-card" data-anime="the-angel-next-door-spoils-me-rotten" data-title="Ангел по соседству" data-rating="8.1"></div>
+                <div class="the-eminence-in-shadow-card" data-anime="the-eminence-in-shadow" data-title="Величайший Демон-Лорд" data-rating="8.5"></div>
+                <div class="the-rising-of-the-shield-hero-card" data-anime="the-rising-of-the-shield-hero" data-title="Восхождение Героя Щита" data-rating="8.2"></div>
+                <div class="one-punch-man-card" data-anime="one-punch-man" data-title="Один удар" data-rating="8.8"></div>
+                <div class="that-time-i-got-reincarnated-at-a-slime-card" data-anime="that-time-i-got-reincarnated-at-a-slime" data-title="Перерождение в слизь" data-rating="8.0"></div>
+                <div class="kagya-sama-love-is-war-card" data-anime="kagya-sama-love-is-war" data-title="Кагуя-сама" data-rating="8.6"></div>
             </div>
             <div class="scroll-button-left"></div>
             <div class="scroll-button-right"></div>
         </div>
     </div>
+
+    <!-- Модальное окно для быстрого просмотра -->
+    <div id="quick-view-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-poster">
+                    <img id="modal-poster" src="" alt="">
+                    <div class="modal-rating" id="modal-rating"></div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title"></h2>
+                    <div class="modal-stats">
+                        <span id="modal-episodes"></span>
+                        <span id="modal-year"></span>
+                        <span id="modal-genre"></span>
+                    </div>
+                    <p id="modal-description"></p>
+                    <div class="modal-actions">
+                        <button class="modal-btn primary">▶ Смотреть</button>
+                        <button class="modal-btn secondary favorite-btn">❤ В избранное</button>
+                        <button class="modal-btn secondary">📝 Оставить отзыв</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -286,5 +338,6 @@
 
     <script src="./js/script.js"></script>
     <script src="./js/script-card.js"></script>
+    <script src="./js/script-new.js"></script>
 </body>
 </html>
