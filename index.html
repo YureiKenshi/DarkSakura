@@ -30,20 +30,135 @@
 
             <div id="notification-icon" class="notification-icon"></div>
             <div id="notification-icon-panel" class="notification-icon-panel">
-                <div class="notification-icon-buttons">
-                    <div class="notification-icon-notification">Уведомления</div>
-                    <div class="notification-icon-settings">⚙</div>
+                <div class="notification-header">
+                    <div class="notification-tabs">
+                        <div class="notification-tab active" data-tab="notifications">Уведомления</div>
+                        <div class="notification-tab" data-tab="settings">⚙ Настройки</div>
+                    </div>
                 </div>
-                <div class="notifications"></div>
+                <div class="notification-content">
+                    <div class="notification-tab-content active" id="notifications-tab">
+                        <div class="notification-item">
+                            <div class="notification-icon-small">🔔</div>
+                            <div class="notification-text">
+                                <div class="notification-title">Новое аниме</div>
+                                <div class="notification-desc">Добавлено новое аниме "Атака титанов"</div>
+                                <div class="notification-time">2 минуты назад</div>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="notification-icon-small">📺</div>
+                            <div class="notification-text">
+                                <div class="notification-title">Новая серия</div>
+                                <div class="notification-desc">Вышла новая серия "Наруто"</div>
+                                <div class="notification-time">1 час назад</div>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="notification-icon-small">⭐</div>
+                            <div class="notification-text">
+                                <div class="notification-title">Рекомендация</div>
+                                <div class="notification-desc">Вам может понравиться "Человек-бензопила"</div>
+                                <div class="notification-time">3 часа назад</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notification-tab-content" id="settings-tab">
+                        <div class="settings-section">
+                            <h4>Уведомления</h4>
+                            <div class="setting-item">
+                                <label>Новые серии</label>
+                                <input type="checkbox" checked>
+                            </div>
+                            <div class="setting-item">
+                                <label>Новые аниме</label>
+                                <input type="checkbox" checked>
+                            </div>
+                            <div class="setting-item">
+                                <label>Рекомендации</label>
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                        <div class="settings-section">
+                            <h4>Качество видео</h4>
+                            <div class="setting-item">
+                                <label>Автоматическое качество</label>
+                                <input type="checkbox" checked>
+                            </div>
+                            <div class="setting-item">
+                                <label>Предпочитаемое качество</label>
+                                <select>
+                                    <option>1080p</option>
+                                    <option>720p</option>
+                                    <option>480p</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
             <div id="profile-icon" class="profile-icon"></div>
             <div id="profile-icon-panel" class="profile-icon-panel">
-                <div class="profile-icon-buttons"><p>Настройки</p></div>
-                <div class="profile-icon-buttons"><p>Профиль</p></div>
-                <div class="profile-icon-buttons"><p>Избранное</p></div>
-                <div class="profile-icon-buttons"><p>История</p></div>
+                <div class="profile-header">
+                    <div class="profile-tabs">
+                        <div class="profile-tab active" data-tab="profile">👤 Профиль</div>
+                        <div class="profile-tab" data-tab="settings">⚙ Настройки</div>
+                    </div>
+                </div>
+                <div class="profile-content">
+                    <div class="profile-tab-content active" id="profile-tab">
+                        <div class="profile-info">
+                            <div class="profile-avatar">🌸</div>
+                            <div class="profile-details">
+                                <div class="profile-name">Пользователь</div>
+                                <div class="profile-status">Онлайн</div>
+                            </div>
+                        </div>
+                        <div class="profile-menu">
+                            <div class="profile-menu-item">📚 Избранное</div>
+                            <div class="profile-menu-item">📖 История</div>
+                            <div class="profile-menu-item">📊 Статистика</div>
+                            <div class="profile-menu-item">🔐 Выйти</div>
+                        </div>
+                    </div>
+                    <div class="profile-tab-content" id="settings-tab">
+                        <div class="settings-section">
+                            <h4>Внешний вид</h4>
+                            <div class="setting-item">
+                                <label>Темная тема</label>
+                                <input type="checkbox" checked>
+                            </div>
+                            <div class="setting-item">
+                                <label>Автопрокрутка</label>
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                        <div class="settings-section">
+                            <h4>Язык</h4>
+                            <div class="setting-item">
+                                <label>Язык интерфейса</label>
+                                <select>
+                                    <option>Русский</option>
+                                    <option>English</option>
+                                    <option>日本語</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="settings-section">
+                            <h4>Аккаунт</h4>
+                            <div class="setting-item">
+                                <label>Изменить пароль</label>
+                                <button class="settings-btn">Изменить</button>
+                            </div>
+                            <div class="setting-item">
+                                <label>Удалить аккаунт</label>
+                                <button class="settings-btn danger">Удалить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>   

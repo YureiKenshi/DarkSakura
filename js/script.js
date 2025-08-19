@@ -43,13 +43,30 @@ document.querySelectorAll('.big-anime-container').forEach(wrapper => {
 
 
 
-// Панелька профиля
+// Панелька профиля с вкладками
 document.addEventListener('DOMContentLoaded', function() {
     const toggleDiv = document.getElementById('profile-icon');
     const panel = document.getElementById('profile-icon-panel');
+    const profileTabs = panel.querySelectorAll('.profile-tab');
+    const profileTabContents = panel.querySelectorAll('.profile-tab-content');
 
     toggleDiv.addEventListener('click', function() {
         panel.classList.toggle('open');
+    });
+
+    // Переключение вкладок профиля
+    profileTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Убираем активный класс со всех вкладок
+            profileTabs.forEach(t => t.classList.remove('active'));
+            profileTabContents.forEach(content => content.classList.remove('active'));
+            
+            // Добавляем активный класс к выбранной вкладке
+            this.classList.add('active');
+            document.getElementById(targetTab + '-tab').classList.add('active');
+        });
     });
 
     document.addEventListener('click', function(event) {
@@ -58,13 +75,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-// Панелька уведомлений
+
+// Панелька уведомлений с вкладками
 document.addEventListener('DOMContentLoaded', function() {
     const toggleDivN = document.getElementById('notification-icon');
     const panelN = document.getElementById('notification-icon-panel');
+    const notificationTabs = panelN.querySelectorAll('.notification-tab');
+    const notificationTabContents = panelN.querySelectorAll('.notification-tab-content');
 
     toggleDivN.addEventListener('click', function() {
         panelN.classList.toggle('open');
+    });
+
+    // Переключение вкладок уведомлений
+    notificationTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Убираем активный класс со всех вкладок
+            notificationTabs.forEach(t => t.classList.remove('active'));
+            notificationTabContents.forEach(content => content.classList.remove('active'));
+            
+            // Добавляем активный класс к выбранной вкладке
+            this.classList.add('active');
+            document.getElementById(targetTab + '-tab').classList.add('active');
+        });
     });
 
     document.addEventListener('click', function(event) {
