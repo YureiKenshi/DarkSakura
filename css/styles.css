@@ -126,8 +126,8 @@ header {
 
 }
 .profile-icon-panel {
-    width: 130px;
-    height: 300px;
+    width: 350px;
+    height: 400px;
     background-color: rgb(20, 20, 20);
     border: 3px solid rgb(255, 0, 183);
     top: 340%;
@@ -135,35 +135,160 @@ header {
     opacity: 0;
     position: absolute;
     visibility: hidden;
-    padding: 20px;
     transform: translateY(-50%);
     transition: opacity 0.5s ease, visibility 0.5s ease;
     z-index: 1000;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 .profile-icon-panel.open {
     visibility: visible;
     opacity: 1;
 }
 
-.profile-icon-buttons {
-    width: 100%;
-    height: 10%;
-    background-color: rgb(30, 30, 30);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(238, 195, 235);
-    border-radius: 10px;
-    transition: transform 0.5s ease, color 0.5s ease;
-    user-select: none;
+/* Заголовок профиля */
+.profile-header {
+    background: linear-gradient(135deg, rgb(40, 15, 35), rgb(60, 25, 55));
+    padding: 15px;
+    border-bottom: 2px solid rgb(98, 61, 95);
 }
-.profile-icon-buttons:hover {
-    transform: scale(1.1);
+
+.profile-tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.profile-tab {
+    padding: 8px 15px;
+    background-color: rgba(30, 30, 30, 0.7);
+    color: rgb(238, 195, 235);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    border: 1px solid transparent;
+}
+
+.profile-tab:hover {
+    background-color: rgba(98, 61, 95, 0.5);
     color: rgb(247, 81, 236);
+}
+
+.profile-tab.active {
+    background-color: rgb(98, 61, 95);
+    color: rgb(247, 81, 236);
+    border-color: rgb(247, 81, 236);
+}
+
+/* Контент профиля */
+.profile-content {
+    height: calc(100% - 60px);
+    overflow-y: auto;
+}
+
+.profile-tab-content {
+    display: none;
+    padding: 15px;
+    height: 100%;
+}
+
+.profile-tab-content.active {
+    display: block;
+}
+
+/* Информация профиля */
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: linear-gradient(135deg, rgba(40, 15, 35, 0.5), rgba(60, 25, 55, 0.5));
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(98, 61, 95, 0.3);
+}
+
+.profile-avatar {
+    font-size: 40px;
+    color: rgb(247, 81, 236);
+    background-color: rgba(30, 30, 30, 0.8);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(98, 61, 95);
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-name {
+    color: rgb(238, 195, 235);
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.profile-status {
+    color: rgb(247, 81, 236);
+    font-size: 12px;
+    background-color: rgba(98, 61, 95, 0.3);
+    padding: 2px 8px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Меню профиля */
+.profile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-menu-item {
+    padding: 12px 15px;
+    background-color: rgba(30, 30, 30, 0.8);
+    color: rgb(238, 195, 235);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    font-size: 14px;
+}
+
+.profile-menu-item:hover {
+    background-color: rgba(40, 40, 40, 0.9);
+    color: rgb(247, 81, 236);
+    border-left-color: rgb(247, 81, 236);
+    transform: translateX(5px);
+}
+
+/* Кнопки настроек */
+.settings-btn {
+    background-color: rgb(98, 61, 95);
+    color: rgb(238, 195, 235);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.settings-btn:hover {
+    background-color: rgb(247, 81, 236);
+    color: white;
+}
+
+.settings-btn.danger {
+    background-color: rgb(150, 30, 30);
+}
+
+.settings-btn.danger:hover {
+    background-color: rgb(200, 50, 50);
 }
 
 
@@ -190,8 +315,8 @@ header {
     background-image: url('../image/tech/notification-icon2.png');
 }
 .notification-icon-panel {
-    width: 130px;
-    height: 300px;
+    width: 350px;
+    height: 400px;
     background-color: rgb(20, 20, 20);
     border: 3px solid rgb(255, 0, 183);
     top: 340%;
@@ -199,70 +324,156 @@ header {
     opacity: 0;
     position: absolute;
     visibility: hidden;
-    padding: 20px;
     transform: translateY(-50%);
     transition: opacity 0.5s ease, visibility 0.5s ease;
     z-index: 1000;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 .notification-icon-panel.open {
     visibility: visible;
     opacity: 1;
 }
-.notification-icon-buttons {
-    height: 10%;
+
+/* Заголовок уведомлений */
+.notification-header {
+    background: linear-gradient(135deg, rgb(40, 15, 35), rgb(60, 25, 55));
+    padding: 15px;
+    border-bottom: 2px solid rgb(98, 61, 95);
+}
+
+.notification-tabs {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease, color 0.5s ease;
-    user-select: none;
     gap: 10px;
 }
-.notification-icon-notification {
-    width: 80%;
-    height: 100%;
+
+.notification-tab {
+    padding: 8px 15px;
+    background-color: rgba(30, 30, 30, 0.7);
     color: rgb(238, 195, 235);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease, color 0.5s ease;
-    border-radius: 10px;
-    background-color: rgb(30, 30, 30);
-    padding-left: 10px;
-    padding-right: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    border: 1px solid transparent;
 }
-.notification-icon-notification:hover {
-    transform: scale(1.1);
+
+.notification-tab:hover {
+    background-color: rgba(98, 61, 95, 0.5);
     color: rgb(247, 81, 236);
 }
-.notification-icon-settings {
-    width: 20%;
-    height: 100%;
-    color: rgb(238, 195, 235);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease, color 0.5s ease;
-    border-radius: 10px;
-    background-color: rgb(30, 30, 30);
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.notification-icon-settings:hover {
-    transform: scale(1.1);
+
+.notification-tab.active {
+    background-color: rgb(98, 61, 95);
     color: rgb(247, 81, 236);
+    border-color: rgb(247, 81, 236);
 }
-.notifications {
-    background-color: rgb(30, 30, 30);
-    border-radius: 10px;
-    width: 110%;
+
+/* Контент уведомлений */
+.notification-content {
+    height: calc(100% - 60px);
+    overflow-y: auto;
+}
+
+.notification-tab-content {
+    display: none;
+    padding: 15px;
     height: 100%;
+}
+
+.notification-tab-content.active {
+    display: block;
+}
+
+/* Элементы уведомлений */
+.notification-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-left: 3px solid rgb(98, 61, 95);
+    transition: all 0.3s ease;
+}
+
+.notification-item:hover {
+    background-color: rgba(40, 40, 40, 0.9);
+    border-left-color: rgb(247, 81, 236);
+    transform: translateX(5px);
+}
+
+.notification-icon-small {
+    font-size: 20px;
+    color: rgb(247, 81, 236);
+    flex-shrink: 0;
+}
+
+.notification-text {
+    flex: 1;
+}
+
+.notification-title {
+    font-weight: bold;
+    color: rgb(238, 195, 235);
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.notification-desc {
+    color: rgba(238, 195, 235, 0.8);
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.notification-time {
+    color: rgba(238, 195, 235, 0.6);
+    font-size: 11px;
+}
+
+/* Настройки */
+.settings-section {
+    margin-bottom: 20px;
+}
+
+.settings-section h4 {
+    color: rgb(247, 81, 236);
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(98, 61, 95, 0.5);
+    padding-bottom: 5px;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(30, 30, 30, 0.5);
+}
+
+.setting-item label {
+    color: rgb(238, 195, 235);
+    font-size: 13px;
+}
+
+.setting-item input[type="checkbox"] {
+    accent-color: rgb(247, 81, 236);
+    transform: scale(1.2);
+}
+
+.setting-item select {
+    background-color: rgb(30, 30, 30);
+    color: rgb(238, 195, 235);
+    border: 1px solid rgb(98, 61, 95);
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.setting-item select:focus {
+    outline: none;
+    border-color: rgb(247, 81, 236);
 }
 
 
@@ -622,5 +833,818 @@ footer {
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
+    }
+}
+
+/* Переключатель темы */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+.theme-btn {
+    background: linear-gradient(135deg, rgb(98, 61, 95), rgb(147, 81, 144));
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.theme-icon {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.theme-btn:hover .theme-icon {
+    transform: rotate(180deg);
+}
+
+/* Музыкальный плеер */
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, rgba(25, 5, 21, 0.95), rgba(40, 15, 35, 0.95));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgb(98, 61, 95);
+    border-radius: 15px;
+    padding: 15px;
+    width: 300px;
+    z-index: 1000;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.music-player:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.music-info {
+    margin-bottom: 10px;
+}
+
+.music-title {
+    color: rgba(238, 195, 235, 0.7);
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.music-track {
+    color: rgb(247, 81, 236);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.music-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.music-btn {
+    background: rgba(98, 61, 95, 0.3);
+    border: 1px solid rgb(98, 61, 95);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: rgb(238, 195, 235);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-btn:hover {
+    background: rgb(98, 61, 95);
+    color: white;
+    transform: scale(1.1);
+}
+
+.play-btn {
+    background: rgb(247, 81, 236);
+    color: white;
+    border-color: rgb(247, 81, 236);
+}
+
+.music-progress {
+    width: 100%;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(98, 61, 95, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, rgb(247, 81, 236), rgb(255, 81, 246));
+    width: 45%;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* Ссылка на избранное */
+.favorites-link {
+    position: relative;
+    color: rgb(238, 195, 235);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.favorites-link:hover {
+    color: rgb(247, 81, 236);
+    transform: translateY(-2px);
+}
+
+.favorites-count {
+    background: rgb(247, 81, 236);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, rgba(25, 5, 21, 0.95), rgba(40, 15, 35, 0.95));
+    margin: 5% auto;
+    padding: 0;
+    border: 2px solid rgb(98, 61, 95);
+    border-radius: 20px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.close {
+    color: rgb(238, 195, 235);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1;
+}
+
+.close:hover {
+    color: rgb(247, 81, 236);
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    padding: 30px;
+}
+
+.modal-poster {
+    position: relative;
+}
+
+.modal-poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.modal-rating {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(247, 81, 236, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.modal-info h2 {
+    color: rgb(247, 81, 236);
+    font-size: 28px;
+    margin: 0 0 15px 0;
+}
+
+.modal-stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.modal-stats span {
+    background: rgba(98, 61, 95, 0.3);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    color: rgb(238, 195, 235);
+    border: 1px solid rgba(98, 61, 95, 0.5);
+}
+
+.modal-info p {
+    color: rgba(238, 195, 235, 0.9);
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.modal-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-btn.primary {
+    background: linear-gradient(135deg, rgb(247, 81, 236), rgb(255, 81, 246));
+    color: white;
+}
+
+.modal-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(247, 81, 236, 0.4);
+}
+
+.modal-btn.secondary {
+    background: rgba(98, 61, 95, 0.3);
+    color: rgb(238, 195, 235);
+    border: 2px solid rgb(98, 61, 95);
+}
+
+.modal-btn.secondary:hover {
+    background: rgba(98, 61, 95, 0.5);
+    border-color: rgb(247, 81, 236);
+    transform: translateY(-2px);
+}
+
+/* Улучшенные эффекты для карточек */
+.anime-container > div {
+    position: relative;
+    overflow: hidden;
+}
+
+.anime-container > div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(247, 81, 236, 0.2), transparent);
+    transition: left 0.5s ease;
+    z-index: 1;
+}
+
+.anime-container > div:hover::before {
+    left: 100%;
+}
+
+.anime-container > div::after {
+    content: attr(data-rating);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(247, 81, 236, 0.9);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.anime-container > div:hover::after {
+    opacity: 1;
+}
+
+/* Адаптивность для новых элементов */
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .theme-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .music-player {
+        bottom: 10px;
+        left: 10px;
+        width: 250px;
+        padding: 10px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+    
+    .modal-body {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .modal-poster {
+        text-align: center;
+    }
+    
+    .modal-poster img {
+        max-width: 200px;
+    }
+    
+    .modal-actions {
+        justify-content: center;
+    }
+}
+
+/* Светлая тема */
+body.light-theme {
+    background-color: rgb(245, 245, 245);
+    color: rgb(50, 50, 50);
+}
+
+body.light-theme .background-image {
+    opacity: 0.1;
+}
+
+body.light-theme header {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.95));
+    border-bottom: 2px solid rgb(200, 200, 200);
+}
+
+body.light-theme .logo a {
+    color: rgb(150, 50, 150);
+}
+
+body.light-theme .nav a {
+    color: rgb(80, 80, 80);
+}
+
+body.light-theme .nav a:hover {
+    color: rgb(150, 50, 150);
+}
+
+body.light-theme .anime-list-all h1 {
+    color: rgb(100, 50, 100);
+}
+
+body.light-theme .anime-container {
+    background-color: rgb(250, 250, 250);
+    border: 3px solid rgb(200, 150, 200);
+}
+
+body.light-theme .music-player {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.95));
+    border: 2px solid rgb(200, 150, 200);
+}
+
+body.light-theme .modal-content {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.95));
+    border: 2px solid rgb(200, 150, 200);
+}
+
+body.light-theme .modal-info h2 {
+    color: rgb(150, 50, 150);
+}
+
+body.light-theme .modal-info p {
+    color: rgb(80, 80, 80);
+}
+
+body.light-theme .modal-stats span {
+    background: rgba(200, 150, 200, 0.3);
+    color: rgb(80, 80, 80);
+    border: 1px solid rgba(200, 150, 200, 0.5);
+}
+
+/* Пульсирующие эффекты */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(247, 81, 236, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(247, 81, 236, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(247, 81, 236, 0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(247, 81, 236, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(247, 81, 236, 0.8), 0 0 30px rgba(247, 81, 236, 0.6);
+    }
+}
+
+/* Применяем анимации к элементам */
+.theme-btn {
+    animation: float 3s ease-in-out infinite;
+}
+
+.music-player {
+    animation: glow 2s ease-in-out infinite;
+}
+
+.favorites-count {
+    animation: pulse 2s infinite;
+}
+
+/* Улучшенные эффекты для карточек */
+.anime-container > div {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.anime-container > div:hover {
+    transform: translateY(-10px) scale(1.05);
+    z-index: 10;
+}
+
+.anime-container > div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(247, 81, 236, 0.3), transparent);
+    transition: left 0.6s ease;
+    z-index: 1;
+}
+
+.anime-container > div:hover::before {
+    left: 100%;
+}
+
+.anime-container > div::after {
+    content: attr(data-rating);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(247, 81, 236, 0.9);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+    transform: scale(0.8);
+}
+
+.anime-container > div:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Добавляем градиентную рамку */
+.anime-container > div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(247, 81, 236, 0.1), transparent);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.anime-container > div:hover::before {
+    opacity: 1;
+}
+
+/* Улучшенные кнопки */
+.anime-btn, .modal-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.anime-btn::before, .modal-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.anime-btn:hover::before, .modal-btn:hover::before {
+    left: 100%;
+}
+
+/* Эффект частиц */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgb(247, 81, 236);
+    border-radius: 50%;
+    animation: particleFloat 6s infinite linear;
+    opacity: 0.6;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Улучшенные уведомления */
+.notification-popup {
+    position: relative;
+    overflow: hidden;
+}
+
+.notification-popup::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.notification-popup:hover::before {
+    transform: translateX(100%);
+}
+
+/* Эффект печатающегося текста */
+.typing-effect {
+    overflow: hidden;
+    border-right: 2px solid rgb(247, 81, 236);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgb(247, 81, 236); }
+}
+
+/* Улучшенный скроллбар */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(30, 30, 30, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, rgb(98, 61, 95), rgb(147, 81, 144));
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, rgb(147, 81, 144), rgb(247, 81, 236));
+}
+
+/* Эффект неонового свечения */
+.neon-glow {
+    text-shadow: 
+        0 0 5px rgb(247, 81, 236),
+        0 0 10px rgb(247, 81, 236),
+        0 0 15px rgb(247, 81, 236),
+        0 0 20px rgb(247, 81, 236);
+    animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+    from {
+        text-shadow: 
+            0 0 5px rgb(247, 81, 236),
+            0 0 10px rgb(247, 81, 236),
+            0 0 15px rgb(247, 81, 236),
+            0 0 20px rgb(247, 81, 236);
+    }
+    to {
+        text-shadow: 
+            0 0 2px rgb(247, 81, 236),
+            0 0 5px rgb(247, 81, 236),
+            0 0 8px rgb(247, 81, 236),
+            0 0 12px rgb(247, 81, 236);
+    }
+}
+
+/* Эффект волн */
+.wave-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.wave-effect::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(247, 81, 236, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.wave-effect:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Улучшенные переходы для модального окна */
+.modal-content {
+    transform-origin: center;
+    animation: modalSlideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px) scale(0.8) rotateX(-20deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotateX(0deg);
+    }
+}
+
+/* Эффект загрузки */
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(98, 61, 95, 0.3);
+    border-top: 4px solid rgb(247, 81, 236);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Улучшенные эффекты для светлой темы */
+body.light-theme .theme-btn {
+    background: linear-gradient(135deg, rgb(200, 150, 200), rgb(180, 120, 180));
+}
+
+body.light-theme .music-player {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.95));
+    border: 2px solid rgb(200, 150, 200);
+}
+
+body.light-theme .music-track {
+    color: rgb(150, 50, 150);
+}
+
+body.light-theme .progress-fill {
+    background: linear-gradient(90deg, rgb(150, 50, 150), rgb(180, 80, 180));
+}
+
+body.light-theme .favorites-count {
+    background: rgb(150, 50, 150);
+}
+
+/* Адаптивные улучшения */
+@media (max-width: 768px) {
+    .particle {
+        display: none;
+    }
+    
+    .neon-glow {
+        text-shadow: none;
+        animation: none;
+    }
+    
+    .typing-effect {
+        animation: none;
+        white-space: normal;
+        border-right: none;
     }
 }
